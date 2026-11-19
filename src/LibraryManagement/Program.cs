@@ -10,7 +10,7 @@ bookRepository.Add(book1);
 bookRepository.Add(book2);
 bookRepository.Add(book3);
 Console.WriteLine("———————————————————————————————————————");
-Console.WriteLine("All Bookss::");
+Console.WriteLine("All Books:");
 PrintAllBook(bookRepository);
 Console.WriteLine("————————————————");
 
@@ -18,7 +18,7 @@ Console.Write("Deleting Book1 => ");
 Console.WriteLine(bookRepository.Delete(book1.Id) ? "OK" : "Failed");
 Console.WriteLine("————————————————");
 
-Console.WriteLine("All Bookss::");
+Console.WriteLine("All Books:");
 PrintAllBook(bookRepository);
 Console.WriteLine("————————————————");
 
@@ -56,7 +56,7 @@ Console.Write("Getting name of Member 3 => ");
 var resultMember = memberRepository.GetById(3);
 Console.WriteLine(resultMember is null ? "not found" : $"{resultMember.FullName}");
 Console.WriteLine("————————————————");
-Console.WriteLine("Searching for 'i' MemberRepository:");
+Console.WriteLine("Searching for 'i' in MemberRepository:");
 foreach (var item in memberRepository.Search("i"))
     Console.WriteLine($"{item.Id} - {item.FullName}");
 
