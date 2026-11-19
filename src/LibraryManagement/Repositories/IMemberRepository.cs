@@ -1,12 +1,12 @@
 using LibraryManagement.Models;
 namespace LibraryManagement.Repositories;
 
-internal interface IMemberRepository
+public interface IMemberRepository
 {
-    public IEnumerable<Member> GetAll();
-    public IEnumerable<Member> Search(string fullName);
-    public Member? GetById(int id);
-    public void Add(Member member);
+    IEnumerable<Member> GetAll();
+    IEnumerable<Member> Search(string fullName);
+    Member? GetById(int id);
+    void Add(Member member);
 
-    public bool Delete(int id);
+    bool Delete(int id);
 }

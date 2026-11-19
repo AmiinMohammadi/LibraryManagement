@@ -2,12 +2,12 @@ using LibraryManagement.Models;
 
 namespace LibraryManagement.Repositories;
 
-internal interface IBookRepository
+public interface IBookRepository
 {
-    public IEnumerable<Book> GetAll();
-    public IEnumerable<Book> Search(string title);
-    public Book? GetById(int id);
-    public void Add(Book book);
+    IEnumerable<Book> GetAll();
+    IEnumerable<Book> Search(string title);
+    Book? GetById(int id);
+    void Add(Book book);
 
-    public bool Delete(int id);
+    bool Delete(int id);
 }
